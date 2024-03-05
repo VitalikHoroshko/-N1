@@ -1,0 +1,60 @@
+print("Завдання 1") 
+print("Twinkle, twinkle, little star,")
+print("     ", "How I wonder what you are!")
+print("          ", "Up above the world so high,")
+print("          ", "Like a diamond in the sky.")
+print("Twinkle, twinkle, little star,")
+print("     ", "How I wonder what you are")
+
+print("")
+print("Завдання 2")
+radius = float(input("Введіть радіус кола: "))
+area = 3.14159 * radius**2
+print("Площа кола з радіусом", radius, "дорівнює", area)
+
+print("")
+print("Завдання 3")
+color_list = ["RED", "GREEN", "WHITE", "BLACK"]
+print("Перший колір:", color_list[0])
+print("Другий колір:", color_list[-1])
+
+print("")
+print("Завдання 4")
+n = 5
+result = n + int(str(n) * 2) + int(str(n) * 3)
+print("Результат:", result)
+
+print("")
+print("Завдання 5")
+numbers = [386, 462, 47, 418, 907, 344, 236, 375, 823, 566, 597, 978, 328, 615, 953, 345, 399, 162, 758, 219, 918, 237, 412, 566, 826, 248, 866, 950, 626, 949, 687, 217, 815, 67, 104, 58, 512, 24, 892, 894, 767, 553, 81, 379, 843, 831, 445, 742, 717, 958, 743, 527]
+
+for num in numbers:
+    if num % 2 == 0:
+        print(num)
+    if num == 237:
+        break
+
+print("")
+print("Завдання 7")
+def print_even_numbers(n, m):
+    for i in range(-n, n + 1, m):
+        if i % 2 == 0:
+            print(i)
+n_value = 10
+m_value = 3
+print_even_numbers(n_value, m_value)
+
+print("")
+print("Завдання 8")
+def count_password_combinations(m):
+    if m > 25 or m <= 0:
+        return "Неприпустиме значення m"
+
+    combinations = 1
+    for i in range(25, 25 - m, -1):
+        combinations *= i
+
+    return combinations
+m_value = 3
+result = count_password_combinations(m_value)
+print(f"Кількість можливих комбінацій для паролю при m={m_value}: {result}")
